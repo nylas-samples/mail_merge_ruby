@@ -1,0 +1,14 @@
+<html>
+<head>
+<script src="https://cdn.tailwindcss.com"></script>
+<title>Nylas' Mail Merge</title>
+</head>
+<body>
+<% flash.keys.each do |type| %>
+  <div class="flash bg-green-300 border-green-600 border-b p-4 m-4 rounded w-2/5 grid place-items-center text-red-600 font-bold">
+    <%= flash[type] %>
+  </div>
+<% end %>	
+<%= yield %>
+</body>
+</html>

@@ -1,0 +1,16 @@
+<div class="bg-green-300 border-green-600 border-b p-4 m-4 rounded w-2/5 grid place-items-center">
+<p class="text-6xl text-center">Mail Merge</p>
+<br>
+<form method="post">
+<label for="subject" class="font-bold">Subject: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+<input type="text" name="subject" value="<%= @subject %>" size="50"></input>
+<br><br>
+<label for="body" class="font-bold">Body:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+<textarea name="body" rows=5 cols=49><%= @body %></textarea>
+<br><br>
+<label for="mergefile" class="font-bold">Merge File: &nbsp;</label>
+<input type="file" name="mergefile">
+<br><br>
+<button type="submit" class="block bg-blue-500 hover:bg-blue-700 text-white text-lg mx-auto py-2 px-4 rounded-full">Submit</button>
+</form>
+</div>	
