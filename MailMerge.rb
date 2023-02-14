@@ -83,7 +83,7 @@ post '/' do
 			begin
 				# Call the Send endpoint and send an email for each occurrence on the CSV file
 				message = nylas.send!(to: [{ email: line["Email"], name: full_name }],
-													subject: subject_replaced, body: body_replaced)
+							     subject: subject_replaced, body: body_replaced)
 			rescue => error
 				# Something went wrong
 				puts error.message
