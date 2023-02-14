@@ -1,45 +1,61 @@
-# code-sample-description
-This sample repo will show you how to easily do X with Nylas.
+# Mail Merge Template
+
+This project will show you how to create a Mail Merge Template using Ruby and Sinatra.
 
 ## Setup
 
 ### System dependencies
 
-- Add System dependencies
+- Ruby 3.1.1 or greater
 
 ### Gather environment variables
 
-You'll need the following values from the Nylas Dashboard:
+You'll need the following values:
 
 ```text
-ACCESS_TOKEN = ""
 CLIENT_ID = ""
 CLIENT_SECRET = ""
+ACCESS_TOKEN = ""
 ```
 
-Add the above values to a `.env` file.
+Add the above values to a new `.env` file:
 
-The `.env` file is added to `.gitignore`. Ensure to store these values securely.
+```bash
+$ touch .env # Then add your env variables
+```
 
 ### Install dependencies
 
-[replace with install steps]
 ```bash
-$ npm i
+$ gem install dotenv
+$ gem install sinatra
+$ gem install sinatra-flash
+$ gem install nylas
+$ gem install webrick
+
 ```
 
 ## Usage
 
-The recommended way to use this sample is ...
+Clone the repository. Go to your terminal and type:
 
-You can also clone the repository ...
+```bash
+$ ruby MailMerge.rb
+```
 
-You'll find more detailed instructions ...
+Create an .csv file with information like this:
 
-## Get support
+```
+Name | Last_Name | Account | Address | Email | Gift
+```
 
-If you found a bug or want to suggest a new [feature/use case/sample], please file an issue.
+The only "mandatory" fields are: *Name* and *Email*. You can delete, update or create new fields. 
 
-## Learn more
 
-Visit our [Nylas documentation](https://developer.nylas.com/) to learn more.
+And go to `http://localhost:4567`
+
+You will presented with a form, enter the Subject, Body and select the .csv file that you're going to use and simply press submit to start sending personlized emails.
+
+## Read the blog post
+
+- [How to Create a Mail Merge Template with Ruby](https://www.nylas.com/blog/how-to-create-a-mail-merge-template-with-ruby-and-gmail/)
