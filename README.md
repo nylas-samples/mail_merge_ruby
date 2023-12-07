@@ -13,9 +13,8 @@ This project will show you how to create a Mail Merge Template using Ruby and Si
 You'll need the following values:
 
 ```text
-CLIENT_ID = ""
-CLIENT_SECRET = ""
-ACCESS_TOKEN = ""
+V3_TOKEN = ""
+GRANT_ID = ""
 ```
 
 Add the above values to a new `.env` file:
@@ -31,7 +30,7 @@ $ gem install dotenv
 $ gem install sinatra
 $ gem install sinatra-flash
 $ gem install nylas
-$ gem install webrick
+$ gem install puma
 
 ```
 
@@ -40,13 +39,13 @@ $ gem install webrick
 Clone the repository. Go to your terminal and type:
 
 ```bash
-$ ruby MailMerge.rb
+$ ruby mail_merge.rb
 ```
 
 Create an .csv file with information like this:
 
 ```
-Name | Last_Name | Account | Address | Email | Gift
+Name | Last_Name | Account | Address | Email | Gift | Attachment
 ```
 
 The only "mandatory" fields are: *Name* and *Email*. You can delete, update or create new fields. 
